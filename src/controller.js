@@ -123,7 +123,6 @@ export default function Controller(view, model) {
 		let startTimeVal =  view.elements.startTime.val();
 		let endTimeVal =  view.elements.endTime.val();
 		if ( $(event.target).attr('id') =='startTime' && startTimeVal > endTimeVal ) {
-			console.log('startTime >  endTime');
 			view.elements.endTime.val(startTimeVal);
 		} else if ( $(event.target).attr('id') =='endTime' && startTimeVal > endTimeVal ) {
 			view.elements.startTime.val(endTimeVal);
