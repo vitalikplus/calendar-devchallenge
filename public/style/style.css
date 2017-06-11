@@ -1,0 +1,129 @@
+	* {
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		box-sizing: border-box;
+	}
+
+	.calendar {
+		padding: 10px 0 10px 10px ;
+	}
+
+	.calendar-nav.nav {
+		height: 100px;
+		display: flex;
+	}
+
+	.left, 
+	.right {
+		width: 50%;
+	}
+
+	.calendar-body.body {
+		position: relative;
+	}
+
+	.body-columns	 {
+		display: flex;
+		height: calc(35px * 24 + 40px);
+		margin-left: 40px;
+	}
+
+	.column {
+		/*flex-direction: column;*/
+		flex-grow: 1;
+	}
+
+	.column-header {
+		flex: 0 1 auto;
+		height: 40px;
+		display: flex;	}
+
+	.column-header > p {
+		margin: auto;
+	}	
+	.column-content {
+		flex-grow: 1; /*why it did not work here?*/
+		height: calc(35px * 24);
+		position: relative;
+		border-width: 1px 0 1px 1px;
+		border-style: solid;
+		border-color: LightSlateGrey; 
+	} 
+
+	.column-header.now {
+		background: lightgrey;
+		border-width: 1px 1px 0 1px;
+		border-style: solid;
+		border-color: LightSlateGrey; 
+	}
+
+	.column-content.now {
+		background: lightgrey;
+	}
+
+	.column-event {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: calc(35px * 24);
+	}
+	
+	.item-event {
+		background: rgba(0, 125, 57, .7);
+		height: 103px;
+		border-radius: 5px;
+		margin: 1px;
+		padding: 10px;
+		overflow: hidden;
+		text-align: right;
+	}
+
+	.glyphicon {
+		display: none;
+	}
+
+	.item-event-text {
+		font-size: 20px;
+	}
+
+	.body-rows{
+		display: flex;
+		flex-wrap: wrap;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}	
+
+	.row-hour:first-child {
+		height: 40px;
+		border: none;
+	}
+	.row-hour {
+		height: 35px;
+		width: 100%;
+		border-bottom: 1px solid lightgrey;
+		text-align: left;
+	}
+
+	.input-group {
+		display: flex;
+		border-radius: 5px;
+		overflow: hidden;
+	}
+
+	.input-group .form-control,
+	.input-group .input-group-addon
+	 {
+		width: 20%;
+		border-radius: 0;
+		height: 34px;
+	}
+
+/*	why did not this work?
+	.popover-event {
+		left: 50% !important;
+		top: 50% !important;
+	}*/
