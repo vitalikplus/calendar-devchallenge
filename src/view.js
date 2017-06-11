@@ -73,7 +73,7 @@ export default function View(model) {
 					<h2 class="current-date">${ model.currentDate.format('Do MMM YY') }</h2>
 				</div>
 				<div class="right">
-					<p>In order to create Event click on day colum</p>
+					<h3>In order to create Event click on day colum</h3>
 				</div>
 			</div>
 			<div class="calendar-body body">
